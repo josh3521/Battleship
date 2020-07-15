@@ -4,9 +4,10 @@ namespace Battleship
     {
         public GameBoard()
         {
-            ClearGameScreen();
+            Sprites.DrawBlankScreen();
             Sprites.DrawTitle(14, 14);
-            ClearGameScreen();
+            System.Console.Read();
+            Sprites.DrawBlankScreen();
             Sprites.DrawGameBoard(4, 4);
         }
 

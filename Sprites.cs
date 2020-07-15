@@ -6,14 +6,10 @@ namespace Battleship
     {
         // Container for static methods that draw the game's sprites to the screen.
 
-        public static void DrawBlankScreen(int x, int y)
+        public static void DrawBlankScreen()
         {
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-            for (int i = 0; i < 48; i++)
-            {
-                Console.SetCursorPosition(x, y + i);
-                Console.Write("                                                \n");
-            }
+            Console.Clear();
         }
 
         public static void DrawTitle(int x, int y)
@@ -39,47 +35,98 @@ namespace Battleship
             Console.BackgroundColor = ConsoleColor.DarkBlue;
             Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(x, y);
-            Console.Write("    | A | B | C | D | E | F | G | H | I | J |");
+            Console.Write("    |    A    |    B    |    C    |    D    |    E    |    F    |    G    |    H    |    I    |    J    |");
             Console.SetCursorPosition(x, y + 1);
-            Console.Write("----------------------------------------------");
+            Console.Write("---------------------------------------------------------------------------------------------------------");
             Console.SetCursorPosition(x, y + 2);
-            Console.Write("1   |   |   |   |   |   |   |   |   |   |   |");
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 3);
-            Console.Write("----------------------------------------------");
+            Console.Write("1   |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 4);
-            Console.Write("2   |   |   |   |   |   |   |   |   |   |   |");
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 5);
-            Console.Write("----------------------------------------------");
+            Console.Write("---------------------------------------------------------------------------------------------------------");
+
             Console.SetCursorPosition(x, y + 6);
-            Console.Write("3   |   |   |   |   |   |   |   |   |   |   |");
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 7);
-            Console.Write("----------------------------------------------");
+            Console.Write("2   |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 8);
-            Console.Write("4   |   |   |   |   |   |   |   |   |   |   |");
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 9);
-            Console.Write("----------------------------------------------");
+            Console.Write("---------------------------------------------------------------------------------------------------------");
+
             Console.SetCursorPosition(x, y + 10);
-            Console.Write("5   |   |   |   |   |   |   |   |   |   |   |");
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 11);
-            Console.Write("----------------------------------------------");
+            Console.Write("3   |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 12);
-            Console.Write("6   |   |   |   |   |   |   |   |   |   |   |");
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 13);
-            Console.Write("----------------------------------------------");
+            Console.Write("---------------------------------------------------------------------------------------------------------");
+
             Console.SetCursorPosition(x, y + 14);
-            Console.Write("7   |   |   |   |   |   |   |   |   |   |   |");
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 15);
-            Console.Write("----------------------------------------------");
+            Console.Write("4   |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 16);
-            Console.Write("8   |   |   |   |   |   |   |   |   |   |   |");
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 17);
-            Console.Write("----------------------------------------------");
+            Console.Write("---------------------------------------------------------------------------------------------------------");
+
             Console.SetCursorPosition(x, y + 18);
-            Console.Write("9   |   |   |   |   |   |   |   |   |   |   |");
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 19);
-            Console.Write("----------------------------------------------");
+            Console.Write("5   |         |         |         |         |         |         |         |         |         |         |");
             Console.SetCursorPosition(x, y + 20);
-            Console.Write("10  |   |   |   |   |   |   |   |   |   |   |");
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 21);
+            Console.Write("---------------------------------------------------------------------------------------------------------");
+
+            Console.SetCursorPosition(x, y + 22);
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 23);
+            Console.Write("6   |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 24);
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 25);
+            Console.Write("---------------------------------------------------------------------------------------------------------");
+
+            Console.SetCursorPosition(x, y + 26);
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 27);
+            Console.Write("7   |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 28);
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 29);
+            Console.Write("---------------------------------------------------------------------------------------------------------");
+
+            Console.SetCursorPosition(x, y + 30);
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 31);
+            Console.Write("8   |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 32);
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 33);
+            Console.Write("---------------------------------------------------------------------------------------------------------");
+
+            Console.SetCursorPosition(x, y + 34);
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 35);
+            Console.Write("9   |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 36);
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 37);
+            Console.Write("---------------------------------------------------------------------------------------------------------");
+
+            Console.SetCursorPosition(x, y + 38);
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 39);
+            Console.Write("10  |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 40);
+            Console.Write("    |         |         |         |         |         |         |         |         |         |         |");
+            Console.SetCursorPosition(x, y + 41);
+            Console.Write("---------------------------------------------------------------------------------------------------------");
         }
     }
 }
