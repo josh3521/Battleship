@@ -6,7 +6,15 @@ namespace Battleship
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            GameBoard gb = new GameBoard();
+            Console.Read();
+            CloseUp();
+        }
+
+        public static void CloseUp()
+        {
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Clear();
         }
     }
 }
