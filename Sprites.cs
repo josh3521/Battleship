@@ -128,5 +128,113 @@ namespace Battleship
             Console.SetCursorPosition(x, y + 41);
             Console.Write("---------------------------------------------------------------------------------------------------------");
         }
+
+        public static void DrawShipStern(int x, int y, Directions dir)
+        {
+            Console.SetCursorPosition(x, y);
+            switch (dir)
+            {
+                case Directions.Up:
+                    Console.Write("    ^    ");
+                    Console.SetCursorPosition(x, y + 1);
+                    Console.Write("  /   \\  ");
+                    Console.SetCursorPosition(x, y + 2);
+                    Console.Write("  |   |  ");
+                    break;
+                case Directions.Down:
+                    Console.Write("  |   |  ");
+                    Console.SetCursorPosition(x, y + 1);
+                    Console.Write("  \\   /  ");
+                    Console.SetCursorPosition(x, y + 2);
+                    Console.Write("    V    ");
+                    break;
+                case Directions.Left:
+                    Console.Write("   _-----");
+                    Console.SetCursorPosition(x, y + 1);
+                    Console.Write(" < _     ");
+                    Console.SetCursorPosition(x, y + 2);
+                    Console.Write("    -----");
+                    break;
+                case Directions.Right:
+                    Console.Write("-----_   ");
+                    Console.SetCursorPosition(x, y + 1);
+                    Console.Write("     _ > ");
+                    Console.SetCursorPosition(x, y + 2);
+                    Console.Write("-----    ");
+            }
+        }
+
+        public static void DrawShipMiddle(int x, int y, Directions dir)
+        {
+            switch (dir)
+            {
+                case Directions.Up:
+                    Console.Write("  |   |  ");
+                    Console.SetCursorPosition(x, y + 1);
+                    Console.Write("  |   |  ");
+                    Console.SetCursorPosition(x, y + 2);
+                    Console.Write("  |   |  ");
+                    break;
+                case Directions.Down:
+                    Console.Write("  |   |  ");
+                    Console.SetCursorPosition(x, y + 1);
+                    Console.Write("  |   |  ");
+                    Console.SetCursorPosition(x, y + 2);
+                    Console.Write("  |   |  ");
+                    break;
+                case Directions.Left:
+                    Console.Write("---------");
+                    Console.SetCursorPosition(x, y + 1);
+                    Console.Write("         ");
+                    Console.SetCursorPosition(x, y + 2);
+                    Console.Write("----------");
+                    break;
+                case Directions.Right:
+                    Console.Write("---------");
+                    Console.SetCursorPosition(x, y + 1);
+                    Console.Write("         ");
+                    Console.SetCursorPosition(x, y + 2);
+                    Console.Write("----------");
+            }
+        }
+
+        public static void DrawShipBow(int x, int y, Directions dir)
+        {
+            switch (dir)
+            {
+                case Directions.Up:
+                    Console.Write("  |   |  ");
+                    Console.SetCursorPosition(x, y + 1);
+                    Console.Write("  |   |  ");
+                    Console.SetCursorPosition(x, y + 2);
+                    Console.Write("  \\___/  ");
+                    break;
+                case Directions.Down:
+                    Console.Write("  /---\\  ");
+                    Console.SetCursorPosition(x, y + 1);
+                    Console.Write("  |   |  ");
+                    Console.SetCursorPosition(x, y + 2);
+                    Console.Write("  |   |  ");
+                    break;
+                case Directions.Left:
+                    Console.Write("---------");
+                    Console.SetCursorPosition(x, y + 1);
+                    Console.Write("         ");
+                    Console.SetCursorPosition(x, y + 2);
+                    Console.Write("----------");
+                    break;
+                case Directions.Right:
+                    Console.Write("-------  ");
+                    Console.SetCursorPosition(x, y + 1);
+                    Console.Write("       | ");
+                    Console.SetCursorPosition(x, y + 2);
+                    Console.Write("--------  ");
+            }
+        }
+
+        public static void DrawCursor(int x, int y)
+        {
+
+        }
     }
 }
