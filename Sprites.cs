@@ -161,6 +161,7 @@ namespace Battleship
                     Console.Write("     _ > ");
                     Console.SetCursorPosition(x, y + 2);
                     Console.Write("-----    ");
+                    break;
             }
         }
 
@@ -195,6 +196,7 @@ namespace Battleship
                     Console.Write("         ");
                     Console.SetCursorPosition(x, y + 2);
                     Console.Write("----------");
+                    break;
             }
         }
 
@@ -217,24 +219,60 @@ namespace Battleship
                     Console.Write("  |   |  ");
                     break;
                 case Directions.Left:
-                    Console.Write("---------");
-                    Console.SetCursorPosition(x, y + 1);
-                    Console.Write("         ");
-                    Console.SetCursorPosition(x, y + 2);
-                    Console.Write("----------");
-                    break;
-                case Directions.Right:
                     Console.Write("-------  ");
                     Console.SetCursorPosition(x, y + 1);
                     Console.Write("       | ");
                     Console.SetCursorPosition(x, y + 2);
-                    Console.Write("--------  ");
+                    Console.Write("-------  ");
+                    break;
+                case Directions.Right:
+                    Console.Write("  -------");
+                    Console.SetCursorPosition(x, y + 1);
+                    Console.Write(" |       ");
+                    Console.SetCursorPosition(x, y + 2);
+                    Console.Write("  -------");
+                    break;
             }
         }
 
-        public static void DrawCursor(int x, int y)
+        // Draw a blank tile.
+        public static void DrawBlank(int x, int y, ConsoleColor color)
         {
+            ConsoleColor prevColor = Console.ForegroundColor;
+            Console.BackgroundColor = color;
+            Console.SetCursorPosition(x, y);
+            Console.Write("         ");
+            Console.SetCursorPosition(x, y + 1);
+            Console.Write("         ");
+            Console.SetCursorPosition(x, y + 2);
+            Console.Write("         ");
+            Console.BackgroundColor = prevColor; // Restore original console background color setting.
+        }
 
+        public static void DrawHit(int x, int y)
+        {
+            ConsoleColor prevFgColor = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.SetCursorPosition(x, y);
+            Console.Write("   \\ /   ");
+            Console.SetCursorPosition(x, y + 1);
+            Console.Write("    X    ");
+            Console.SetCursorPosition(x, y + 2);
+            Console.Write("   / \\   ");
+            Console.ForegroundColor = prevFgColor;
+        }
+
+        public static void DrawMiss(int x, int y)
+        {
+            ConsoleColor prevFgColor = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.SetCursorPosition(x, y);
+            Console.Write("    _    ");
+            Console.SetCursorPosition(x, y + 1);
+            Console.Write("  ( _ )  ");
+            Console.SetCursorPosition(x, y + 2);
+            Console.Write("         ");
+            Console.ForegroundColor = prevFgColor;
         }
     }
 }
