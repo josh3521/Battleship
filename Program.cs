@@ -6,6 +6,7 @@ namespace Battleship
     {
         static void Main(string[] args)
         {
+            System.Console.CursorVisible = false;
             GameBoard gb = new GameBoard();
             Console.Read();
             CloseUp();
@@ -15,6 +16,7 @@ namespace Battleship
         {
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
+            Console.CursorVisible = true;
         }
     }
 }
